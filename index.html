@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devon Hinajosa — 1236 D St. SE | Ardesia Architecture & Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #112A46;
+      --charcoal: #161F23;
+      --dark-gray: #323232;
+      --medium-gray: #cbd5e0;
+      --light-gray: #E8EAED;
+      --off-white: #FFF8F2;
+      --white: #ffffff;
+      --black: #000000;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      color: var(--charcoal);
+      background: var(--off-white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--white);
+      border-bottom: 2px solid var(--black);
+      padding: 2.5rem 0 2rem;
+      text-align: center;
+    }
+
+    .brand {
+      letter-spacing: 8px;
+      font-family: 'Cormorant Infant', serif;
+      font-weight: 300;
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .brand-sub {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--dark-gray);
+      margin-top: 0.25rem;
+    }
+
+    /* ── Tab Navigation ── */
+    .tab-nav {
+      background: var(--white);
+      border-bottom: 2px solid var(--black);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .tab-btn {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--dark-gray);
+      background: none;
+      border: none;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .tab-btn:hover {
+      color: var(--black);
+    }
+
+    .tab-btn.active {
+      color: var(--black);
+      font-weight: 600;
+    }
+
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 1.5rem;
+      right: 1.5rem;
+      height: 2px;
+      background: var(--navy);
+    }
+
+    /* ── Tab Content ── */
+    .tab-content {
+      display: none;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Typography ── */
+    h2 {
+      font-family: 'Cormorant Infant', serif;
+      font-weight: 400;
+      font-size: 2rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--navy);
+      display: inline-block;
+    }
+
+    h3 {
+      font-family: 'Cormorant Infant', serif;
+      font-weight: 500;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--light-gray);
+    }
+
+    h4 {
+      font-family: 'Cormorant Infant', serif;
+      font-weight: 500;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      color: var(--charcoal);
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: var(--dark-gray);
+    }
+
+    ul {
+      margin: 0.5rem 0 1.5rem 1.2rem;
+      font-size: 0.9rem;
+      color: var(--dark-gray);
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    strong {
+      font-weight: 500;
+      color: var(--charcoal);
+    }
+
+    /* ── Info Cards ── */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 1.5rem;
+      margin: 2rem 0;
+      justify-content: center;
+    }
+
+    .info-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .info-card .label {
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--dark-gray);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-card .value {
+      font-family: 'Cormorant Infant', serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    /* ── Scope List ── */
+    .scope-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--light-gray);
+      font-size: 0.9rem;
+      color: var(--dark-gray);
+    }
+
+    .scope-item:last-child {
+      border-bottom: none;
+    }
+
+    .scope-marker {
+      width: 6px;
+      height: 6px;
+      min-width: 6px;
+      background: var(--navy);
+      margin-top: 0.55rem;
+    }
+
+    /* ── Photo Grid ── */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 380px));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+      justify-content: center;
+    }
+
+    .photo-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+    }
+
+    .photo-card .caption {
+      padding: 1rem 1.2rem;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--dark-gray);
+      font-weight: 500;
+    }
+
+    /* ── Phase Badge ── */
+    .phase-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border: 1px solid var(--navy);
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── Deliverable Card ── */
+    .deliverable-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .deliverable-card .deliverable-number {
+      font-family: 'Cormorant Infant', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+
+    .deliverable-card .deliverable-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      margin-bottom: 0.75rem;
+    }
+
+    .deliverable-card p {
+      margin-bottom: 0;
+    }
+
+    /* ── Placeholder ── */
+    .placeholder-block {
+      background: var(--white);
+      border: 1px dashed var(--medium-gray);
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .placeholder-block .placeholder-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--medium-gray);
+    }
+
+    /* ── Video Player ── */
+    .video-section {
+      margin: 2rem 0;
+    }
+
+    .video-wrapper {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      overflow: hidden;
+      margin: 1rem 0;
+    }
+
+    .video-wrapper video {
+      width: 100%;
+      display: block;
+    }
+
+    .video-wrapper .video-caption {
+      padding: 0.75rem 1.2rem;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--dark-gray);
+      font-weight: 500;
+      border-top: 1px solid var(--light-gray);
+    }
+
+    .video-note {
+      font-size: 0.75rem;
+      color: var(--medium-gray);
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+
+    /* ── Lightbox ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2.5rem;
+      border-top: 2px solid var(--black);
+      background: var(--white);
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--dark-gray);
+    }
+
+    footer a {
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .tab-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+      }
+
+      .brand {
+        font-size: 1.5rem;
+        letter-spacing: 5px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .tab-content {
+        padding: 2rem 1.25rem 3rem;
+      }
+    }
+
+    @media print {
+      .tab-nav { display: none; }
+      .tab-content { display: block !important; }
+      .tab-content + .tab-content { page-break-before: always; }
+      .lightbox { display: none !important; }
+      body { background: white; }
+      .container { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand">Ardesia</div>
+    <div class="brand-sub">Architecture & Design</div>
+  </header>
+
+  <!-- Tab Navigation -->
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-tab="overview">Project Overview</button>
+    <button class="tab-btn" data-tab="scope">Scope of Work</button>
+    <button class="tab-btn" data-tab="deliverables">Deliverables</button>
+    <button class="tab-btn" data-tab="investment">Investment</button>
+    <button class="tab-btn" data-tab="contract">Contract</button>
+  </nav>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- PROJECT OVERVIEW TAB -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="tab-content active" id="overview">
+    <h2>Project Overview</h2>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="label">Client</div>
+        <div class="value">Devon Hinajosa</div>
+      </div>
+      <div class="info-card">
+        <div class="label">Property</div>
+        <div class="value">1236 D St. SE</div>
+      </div>
+      <div class="info-card">
+        <div class="label">Date</div>
+        <div class="value">February 2026</div>
+      </div>
+    </div>
+
+    <span class="phase-badge">Level Two Reconfiguration + Interior Design</span>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.5rem;">
+      <div>
+        <h3 style="margin-top: 0;">Upstairs</h3>
+        <div class="scope-item"><div class="scope-marker"></div><div>2 bedrooms with en-suites &amp; closets</div></div>
+        <div class="scope-item"><div class="scope-marker"></div><div>Primary master bathroom with walk-through closet</div></div>
+        <div class="scope-item"><div class="scope-marker"></div><div>Laundry room</div></div>
+        <div class="scope-item"><div class="scope-marker"></div><div>Hall closet reconfiguration</div></div>
+        <div class="scope-item"><div class="scope-marker"></div><div>HVAC relocation</div></div>
+      </div>
+      <div>
+        <h3 style="margin-top: 0;">Downstairs</h3>
+        <div class="scope-item"><div class="scope-marker"></div><div>Statement mantle &amp; fireplace</div></div>
+        <div class="scope-item"><div class="scope-marker"></div><div>Built-in cabinetry adjacent to fireplace</div></div>
+        <div class="scope-item"><div class="scope-marker"></div><div>Crown molding, millwork &amp; baseboards</div></div>
+        <div class="scope-item"><div class="scope-marker"></div><div>Widen transition to dining room</div></div>
+        <div class="scope-item"><div class="scope-marker"></div><div>Raised ceiling with exposed wood</div></div>
+        <div class="scope-item"><div class="scope-marker"></div><div>Wet bar</div></div>
+        <div class="scope-item"><div class="scope-marker"></div><div>Kitchen to remain as is</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- SCOPE OF WORK TAB -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="tab-content" id="scope">
+    <h2>Scope of Work</h2>
+
+    <h3>General</h3>
+    <p>New fixtures &amp; finishes throughout both levels to include, but not limited to, lighting fixtures, windows, floors, baseboards, crown molding, paint, built in cabinetry, hardware, tile, plumbing fixtures.</p>
+
+    <h3>Primary Bedroom</h3>
+    <ul>
+      <li>Entry relocated</li>
+      <li>Entry to closet / bathroom relocated</li>
+    </ul>
+
+    <h3>Walk-Through Closet</h3>
+    <ul>
+      <li>Central entry from the bedroom into a full walk-through dressing closet</li>
+      <li>Built-ins on both sides</li>
+      <li>Second door leading directly into the master bath</li>
+    </ul>
+
+    <h3>Master Bathroom</h3>
+    <ul>
+      <li>Converting the existing three-closets into a single open bathroom</li>
+      <li>Keep skylight in master bath</li>
+      <li>All new fixtures &amp; finishes</li>
+    </ul>
+
+    <h3>Bedroom 2 + En-Suite</h3>
+    <ul>
+      <li>Bedroom stays in its current footprint</li>
+      <li>Large walk-in closet converted to an en-suite bathroom</li>
+      <li>New built-in closet solution to replace lost closet space</li>
+    </ul>
+
+    <h3>Laundry Room</h3>
+    <ul>
+      <li>Created out of the space between the master bath endpoint and the window wall</li>
+      <li>Built-in washer/dryer configuration with organized and functional built in cabinetry</li>
+      <li>Possible pocket door entry from hallway</li>
+    </ul>
+
+    <h3>Hallway + Hall Closet</h3>
+    <ul>
+      <li>Double door closet changed to single hall closet</li>
+      <li>Bedroom entry located where second door was</li>
+    </ul>
+
+    <h3>Living Room</h3>
+    <ul>
+      <li><strong>Fireplace:</strong> Stone surround removed, replaced with a statement marble mantel; possible electric insert</li>
+      <li><strong>Built-ins:</strong> Main focus &mdash; floor-to-ceiling cabinetry adjacent to fireplace</li>
+    </ul>
+
+    <h3>Dining Room</h3>
+    <ul>
+      <li>Pocket doors removed to open the living-to-dining space</li>
+      <li>Ceiling raised with ductwork relocated &mdash; exposed wood ceiling treatment</li>
+      <li>Wet bar built-in along the dining room wall</li>
+      <li>New window</li>
+    </ul>
+
+    <h3>Kitchen</h3>
+    <ul>
+      <li>Remains as-is</li>
+    </ul>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- DELIVERABLES TAB -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="tab-content" id="deliverables">
+    <h2>Deliverables</h2>
+
+    <div class="deliverable-card">
+      <div class="deliverable-number">01</div>
+      <div class="deliverable-title">Space Planning</div>
+      <p>Lindsey will reconfigure &amp; finalize floor plans to include areas listed in scope of work. Floor plan will be reconfigured in a way that makes future addition feasible. Detailed construction documents will be delivered to client and contractor.</p>
+    </div>
+
+    <div class="deliverable-card">
+      <div class="deliverable-number">02</div>
+      <div class="deliverable-title">Design Development</div>
+      <p>Lindsey will meet with client to understand their design taste and create room-by-room concept boards with preliminary material selections and inspiration images. Lindsey will create realistic rendered images in key spaces to allow the client to envision their space before materials are purchased. Feedback and changes will be accepted until design is to the clients satisfaction.</p>
+    </div>
+
+    <div class="deliverable-card">
+      <div class="deliverable-number">03</div>
+      <div class="deliverable-title">Selections + Procurement</div>
+      <p>Lindsey will finalize selecting all materials with approval of client. If desired, Lindsey will order, track, and update client &amp; contractor on delivery of materials to site with help of in house assistant. If ordered by Lindsey, she extends client her designer trade discount of 20% off materials from available stores.</p>
+    </div>
+
+    <div class="deliverable-card">
+      <div class="deliverable-number">04</div>
+      <div class="deliverable-title">Specification + Contractor Coordination</div>
+      <p>Lindsey will produce detailed specs, drawings &amp; rendered images for contractors to clearly understand and execute; including dimensions, materials &amp; finish schedules, fixture placements, etc. Lindsey will coordinate directly with contractors, vendors, and any other party involved to ensure the project is executed timely, efficiently and correctly.</p>
+    </div>
+
+    <div class="deliverable-card">
+      <div class="deliverable-number">05</div>
+      <div class="deliverable-title">Ongoing Support</div>
+      <p>Lindsey will be available throughout the project until completion for questions, concerns and resolutions, ensuring the end result meets the clients expectations &amp; desires.</p>
+    </div>
+
+    <h3>Deliverable Examples</h3>
+
+    <div class="photo-grid">
+      <div class="photo-card">
+        <img src="photos/2112 Living.png" alt="3D rendered living room design" onclick="openLightbox(this)">
+        <div class="caption">3D Render &mdash; Living Room Visualization</div>
+      </div>
+      <div class="photo-card">
+        <img src="photos/shower dimensions.jpg" alt="Shower specification drawing with dimensions" onclick="openLightbox(this)">
+        <div class="caption">Specification Drawing: Shower Slab and Tile Dimensions</div>
+      </div>
+    </div>
+
+    <div style="background: var(--white); border: 1px solid var(--light-gray); margin-top: 1.5rem; overflow: hidden;">
+      <img src="photos/floor plan.jpg" width="100%" style="display: block; cursor: pointer;" alt="Preliminary Floor Plan Layout" onclick="openLightbox(this)">
+      <div style="padding: 1rem 1.2rem; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; color: var(--dark-gray); font-weight: 500; border-top: 1px solid var(--light-gray);">Architectural Plan &mdash; Preliminary Floor Plan Layout</div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- INVESTMENT TAB -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="tab-content" id="investment">
+    <h2>Investment</h2>
+
+    <p style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #323232; line-height: 1.7; margin-bottom: 2rem;">
+      The following outlines the full design fee for 1236 D St. SE — covering space planning through construction support across both levels of the home.
+    </p>
+
+    <table style="border-collapse: collapse; width: 100%; margin-bottom: 0;">
+      <thead>
+        <tr style="background: #112A46; color: #ffffff; font-family: 'Montserrat', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;">
+          <th style="padding: 0.75rem 1rem; text-align: left;">Stage</th>
+          <th style="padding: 0.75rem 1rem; text-align: left;">Description</th>
+          <th style="padding: 0.75rem 1rem; text-align: left;">% of Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Discovery</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Space Planning</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">16%</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Design</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Design Development</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">26%</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Selections</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Selections + Procurement</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">24%</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Documentation</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Specification + Contractor Coordination</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">20%</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Construction</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Ongoing Support</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">14%</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.75rem 1rem; border-top: 2px solid #112A46; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23; font-weight: 600;"></td>
+          <td style="padding: 0.75rem 1rem; border-top: 2px solid #112A46; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23; font-weight: 600;">Total</td>
+          <td style="padding: 0.75rem 1rem; border-top: 2px solid #112A46; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23; font-weight: 600;">$27,500</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr style="border: none; border-top: 1px solid #E8EAED; margin: 2.5rem 0;">
+
+    <h3 style="font-family: 'Cormorant Infant', serif; color: #112A46; font-size: 1.3rem; font-weight: 600; margin-top: 0;">Discovery — Space Planning</h3>
+    <p style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #323232; line-height: 1.7; margin: 0.75rem 0 0.5rem;">Complete necessary changes of existing conditions and delivery of fully coordinated construction documents for both levels.</p>
+    <ul style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #323232; line-height: 1.7; margin: 0.5rem 0 0 1.25rem; padding: 0;">
+      <li>Reconfigured floor plans for both levels (upstairs reconfiguration + downstairs updates)</li>
+      <li>Layout designed to accommodate future 8-foot rear extension</li>
+      <li>Detailed construction documents delivered to client and contractor</li>
+      <li>Upstairs scope: master suite, walk-through closet, master bath, bedroom 2 en-suite, laundry room, hallway + hall closet reconfiguration, HVAC relocation coordination</li>
+      <li>Downstairs scope: living room, dining room, transition widening, ceiling raise</li>
+    </ul>
+
+    <h3 style="font-family: 'Cormorant Infant', serif; color: #112A46; font-size: 1.3rem; font-weight: 600; margin-top: 2.5rem;">Design — Design Development</h3>
+    <p style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #323232; line-height: 1.7; margin: 0.75rem 0 0.5rem;">Collaborative design process culminating in room-by-room concept boards and photorealistic 3D renders of key spaces.</p>
+    <ul style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #323232; line-height: 1.7; margin: 0.5rem 0 0 1.25rem; padding: 0;">
+      <li>Client meetings to establish design direction and preferences</li>
+      <li>Room-by-room concept boards with material selections and inspiration imagery</li>
+      <li>Realistic 3D rendered images of key spaces: master suite + walk-through closet, living room (built-ins, fireplace, flooring), dining room (raised wood ceiling, wet bar)</li>
+      <li>Revisions and feedback rounds until client satisfaction</li>
+    </ul>
+
+    <h3 style="font-family: 'Cormorant Infant', serif; color: #112A46; font-size: 1.3rem; font-weight: 600; margin-top: 2.5rem;">Selections — Selections + Procurement</h3>
+    <p style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #323232; line-height: 1.7; margin: 0.75rem 0 0.5rem;">Finalize every material and fixture with client approval, then manage ordering, tracking, and delivery coordination.</p>
+    <ul style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #323232; line-height: 1.7; margin: 0.5rem 0 0 1.25rem; padding: 0;">
+      <li>Finalize all material selections with client approval: flooring, tile, stone; plumbing fixtures, hardware; lighting fixtures; cabinetry + millwork details; crown molding, baseboards, doors; paint colors + finishes</li>
+      <li>Order tracking and delivery coordination with in-house assistant</li>
+      <li>Designer trade discount of 20% extended to client on available materials (discount generally available on tile, lighting fixtures, plumbing fixtures, flooring, hardware, mirrors, &amp; more)</li>
+    </ul>
+
+    <h3 style="font-family: 'Cormorant Infant', serif; color: #112A46; font-size: 1.3rem; font-weight: 600; margin-top: 2.5rem;">Documentation — Specification + Contractor Coordination</h3>
+    <p style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #323232; line-height: 1.7; margin: 0.75rem 0 0.5rem;">Detailed technical documents and direct contractor liaison to ensure design intent is executed precisely in the field.</p>
+    <ul style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #323232; line-height: 1.7; margin: 0.5rem 0 0 1.25rem; padding: 0;">
+      <li>Detailed specification documents with dimensions, materials, and finish schedules</li>
+      <li>Fixture placement drawings</li>
+      <li>Rendered reference images for contractor execution</li>
+      <li>Direct coordination with contractors, vendors, and all parties involved</li>
+    </ul>
+
+    <h3 style="font-family: 'Cormorant Infant', serif; color: #112A46; font-size: 1.3rem; font-weight: 600; margin-top: 2.5rem;">Construction — Ongoing Support</h3>
+    <p style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #323232; line-height: 1.7; margin: 0.75rem 0 0.5rem;">Continuous availability from construction start through final walkthrough to resolve issues and protect the design vision.</p>
+    <ul style="font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #323232; line-height: 1.7; margin: 0.5rem 0 0 1.25rem; padding: 0;">
+      <li>Available throughout project duration until completion</li>
+      <li>Field questions, change order review, and design adjustments</li>
+      <li>Issue resolution to ensure final result meets client expectations</li>
+      <li>Covers duration of construction through final walkthrough</li>
+    </ul>
+
+    <hr style="border: none; border-top: 1px solid #E8EAED; margin: 2.5rem 0;">
+
+    <h3 style="font-family: 'Cormorant Infant', serif; color: #112A46; font-size: 1.3rem; font-weight: 600; margin-top: 0; margin-bottom: 1rem;">Payment Schedule</h3>
+
+    <table style="border-collapse: collapse; width: 100%; margin-bottom: 0;">
+      <thead>
+        <tr style="background: #112A46; color: #ffffff; font-family: 'Montserrat', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;">
+          <th style="padding: 0.75rem 1rem; text-align: left;">Milestone</th>
+          <th style="padding: 0.75rem 1rem; text-align: left;">Amount</th>
+          <th style="padding: 0.75rem 1rem; text-align: left;">Due</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Contract signed</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">$4,500</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Upon signing</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Floor plans delivered &amp; approved</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">$3,680</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Discovery complete</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Design concepts approved</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">$5,980</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Design approved</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">All selections finalized</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">$5,520</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Selections finalized</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Spec package delivered to contractor</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">$4,600</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Documentation delivered</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Construction support complete</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">$3,220</td>
+          <td style="padding: 0.75rem 1rem; border-bottom: 1px solid #E8EAED; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23;">Project management complete</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.75rem 1rem; border-top: 2px solid #112A46; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23; font-weight: 600;">Total</td>
+          <td style="padding: 0.75rem 1rem; border-top: 2px solid #112A46; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23; font-weight: 600;">$27,500</td>
+          <td style="padding: 0.75rem 1rem; border-top: 2px solid #112A46; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #161F23; font-weight: 600;"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 600; color: #323232; line-height: 1.7; margin-top: 2rem;"><strong>Fees cover design services only</strong> — does not include cost of materials, furnishings, or contractor labor. A <strong>20% designer trade discount</strong> on materials ordered through Lindsey is extended to the client where available. The client is aware and understands that any permits or architectural stamps will be provided by a third party, and are not within the scope of these services.</p>
+
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- CONTRACT TAB -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="tab-content" id="contract">
+    <h2>Contract</h2>
+
+    <p style="font-size: 0.8rem; color: var(--dark-gray); margin-bottom: 2rem; font-style: italic;">Interior Design Services Agreement — Phase 1 &nbsp;·&nbsp; Effective February, 2026</p>
+
+    <div class="info-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 2.5rem;">
+      <div class="info-card" style="text-align: left;">
+        <div class="label">Designer</div>
+        <div style="font-family: 'Cormorant Infant', serif; font-size: 1.1rem; font-weight: 500; color: var(--navy); margin-bottom: 0.25rem;">Lindsey Goble</div>
+        <div style="font-size: 0.8rem; color: var(--dark-gray); line-height: 1.6;">Ardesia Architecture &amp; Design<br>lindsey@ardesiaad.com</div>
+      </div>
+      <div class="info-card" style="text-align: left;">
+        <div class="label">Client</div>
+        <div style="font-family: 'Cormorant Infant', serif; font-size: 1.1rem; font-weight: 500; color: var(--navy); margin-bottom: 0.25rem;">Devon Hinajosa</div>
+        <div style="font-size: 0.8rem; color: var(--dark-gray); line-height: 1.6;">1236 D St. SE, Washington DC 20003</div>
+      </div>
+    </div>
+
+    <!-- 1. Project Description -->
+    <h3>1. Project Description</h3>
+    <p>Designer agrees to provide interior design services for the renovation of the two-story brownstone residence located at 1236 D St. SE, Washington DC 20003 (the "Property"), owned by Client. The scope of services is defined in Section 2 of this Agreement.</p>
+    <h4>Exclusions</h4>
+    <p>The following are expressly excluded from this Agreement:</p>
+    <div class="scope-item"><div class="scope-marker"></div><div>The existing kitchen, except for flooring transition detailing</div></div>
+    <div class="scope-item"><div class="scope-marker"></div><div>The planned rear extension (Phase 2) will be scoped under a separate agreement if and when Client elects to proceed, apart from Lindsey making the floor plan feasible for Phase 2.</div></div>
+
+    <!-- 2. Scope of Services -->
+    <h3>2. Scope of Services</h3>
+
+    <h4>2.1 Space Planning</h4>
+    <ul>
+      <li>Development of floor plans for both levels</li>
+      <li>Resolution of layout constraints (hall closet, bedroom 2 en-suite, laundry dimensions)</li>
+    </ul>
+
+    <h4>2.2 Design Development</h4>
+    <ul>
+      <li>Room-by-room concept and mood boards</li>
+      <li>Material and finish palette development</li>
+      <li>Photorealistic 3D renderings of key spaces</li>
+      <li>Presentation of design concepts for Client review and approval</li>
+    </ul>
+
+    <h4>2.3 Specification &amp; Documentation</h4>
+    <ul>
+      <li>Detailed finish schedule (flooring, fixtures, millwork, hardware, paint, tile)</li>
+      <li>Material and fixture specifications with sourcing information</li>
+      <li>Contractor-ready drawings with dimensions, materials, and placement details</li>
+      <li>Annotated floor plans (both levels)</li>
+    </ul>
+
+    <h4>2.4 Selections &amp; Procurement Support</h4>
+    <ul>
+      <li>Guidance and selection of finish material, fixture, hardware, and lighting selections</li>
+      <li>Management of finish schedule and lead time tracking</li>
+
+      <li>Designer trade discount of 20% extended to Client on available materials ordered through Designer</li>
+    </ul>
+
+    <h4>2.5 Contractor Coordination</h4>
+    <ul>
+      <li>Direct coordination with Client's contractor(s) on design specifications, including phone calls directly from contractors, vendors &amp; deliveries to designer</li>
+      <li>Review of contractor questions and RFIs related to design intent</li>
+    </ul>
+
+    <h4>2.6 Construction Phase Design Support</h4>
+    <ul>
+      <li>Ongoing availability throughout duration of project until completion and final walkthrough</li>
+      <li>Review and guidance on change orders affecting design</li>
+    </ul>
+
+    <h4>2.7 Exclusions</h4>
+    <p>The following are expressly outside the scope of this Agreement and are the sole responsibility of Client or Client's contractor: permits, building code compliance, architectural stamps, structural engineering, and mechanical/plumbing/electrical engineering.</p>
+
+    <!-- 3. Deliverables -->
+    <h3>3. Deliverables</h3>
+    <p>The designer, Lindsey Goble, agrees to provide the services listed throughout this proposal under scope of work and deliverables.</p>
+
+    <!-- 4. Compensation -->
+    <h3>4. Compensation</h3>
+
+    <h4>4.1 Design Fee</h4>
+    <p>Total flat fee for Phase 1 design services: <strong>$27,500</strong>, payable in milestones as follows:</p>
+
+    <table style="border-collapse: collapse; width: 100%; margin: 1rem 0 1.5rem;">
+      <thead>
+        <tr style="background: var(--navy); color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;">
+          <th style="padding: 0.75rem 1rem; text-align: left;">Milestone</th>
+          <th style="padding: 0.75rem 1rem; text-align: left;">Amount</th>
+          <th style="padding: 0.75rem 1rem; text-align: left;">Due</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">Contract signed (non-refundable deposit)</td><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">$4,500</td><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">Upon signing</td></tr>
+        <tr><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">Floor plans delivered &amp; approved</td><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">$3,680</td><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">Discovery complete</td></tr>
+        <tr><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">Design concepts approved</td><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">$5,980</td><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">Design approved</td></tr>
+        <tr><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">All selections finalized</td><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">$5,520</td><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">Selections finalized</td></tr>
+        <tr><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">Specification package delivered to contractor</td><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">$4,600</td><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">Documentation delivered</td></tr>
+        <tr><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">Construction support complete</td><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">$3,220</td><td style="padding: 0.75rem 1rem; border-bottom: 1px solid var(--light-gray); font-size: 0.9rem;">Project management complete</td></tr>
+        <tr><td style="padding: 0.75rem 1rem; border-top: 2px solid var(--navy); font-weight: 600; font-size: 0.9rem;">Total</td><td style="padding: 0.75rem 1rem; border-top: 2px solid var(--navy); font-weight: 600; font-size: 0.9rem;">$27,500</td><td style="padding: 0.75rem 1rem; border-top: 2px solid var(--navy);"></td></tr>
+      </tbody>
+    </table>
+
+    <!-- 5. Payment Terms -->
+    <h3>5. Payment Terms</h3>
+    <div class="scope-item"><div class="scope-marker"></div><div>All invoices are due within <strong>14 days</strong> of receipt</div></div>
+    <div class="scope-item"><div class="scope-marker"></div><div>The initial deposit is non-refundable</div></div>
+
+    <!-- 6. Client Responsibilities -->
+    <h3>6. Client Responsibilities</h3>
+    <div class="scope-item"><div class="scope-marker"></div><div><strong>Timely feedback.</strong> Respond to design presentations and approval requests.</div></div>
+    <div class="scope-item"><div class="scope-marker"></div><div><strong>Contractor Payments.</strong> Client is responsible for paying all contractors and vendors to exclude any materials ordered by Designer upon approval of Client. Designer is not a party to construction contracts.</div></div>
+    <div class="scope-item"><div class="scope-marker"></div><div><strong>Decision authority.</strong> Devon Hinajosa is the sole owner of record and sole point of contact authorized to approve designs, selections, and change orders.</div></div>
+    <div class="scope-item"><div class="scope-marker"></div><div><strong>Budget transparency.</strong> Share relevant construction budget information so Designer can make appropriate material and fixture recommendations.</div></div>
+    <div class="scope-item"><div class="scope-marker"></div><div><strong>Existing conditions.</strong> Disclose all known issues with the Property that may affect design decisions.</div></div>
+
+    <!-- 7. Intellectual Property -->
+    <h3>7. Intellectual Property</h3>
+    <p>All designs, drawings, renderings, and specifications created by Designer ("Work Product") are instruments of Designer's professional service. Upon full payment of all fees, Designer grants Client a non-exclusive, perpetual license to use the Work Product solely for the construction, renovation, and maintenance of the Property. Designer retains the right to use project photography and renderings for portfolio and marketing purposes. Client may request anonymity.</p>
+
+    <!-- 8. Confidentiality -->
+    <h3>8. Confidentiality</h3>
+    <p>Both parties agree to keep confidential any non-public financial, personal, or proprietary information shared during this project. This obligation survives termination of this Agreement.</p>
+
+    <!-- 9. Termination -->
+    <h3>9. Termination</h3>
+    <p><strong>By Client:</strong> Client may terminate with 14 days written notice. Client owes payment for all services performed and expenses incurred through termination. The initial deposit is non-refundable.</p>
+    <p><strong>By Designer:</strong> Designer may terminate with 7 days written notice if Client fails to pay within 14 days of a due invoice, becomes unresponsive for more than 30 consecutive days.</p>
+
+    <!-- 10. Limitation of Liability -->
+    <h3>10. Limitation of Liability</h3>
+    <p>Designer provides design services only and is not a licensed architect, structural engineer, or general contractor. Designer is not responsible for structural integrity, code compliance, permitting, construction quality, or pre-existing property conditions. Designer's total liability under this Agreement will not exceed the total fees actually paid by Client. Neither party will be liable for indirect, incidental, or consequential damages.</p>
+
+    <!-- 11. General Provisions -->
+    <h3>11. General Provisions</h3>
+    <div class="scope-item"><div class="scope-marker"></div><div><strong>Entire Agreement.</strong> This Agreement, together with the Design Proposal dated February, 2026, constitutes the entire agreement and supersedes all prior discussions.</div></div>
+    <div class="scope-item"><div class="scope-marker"></div><div><strong>Amendments.</strong> Modifications must be in writing and signed by both parties.</div></div>
+    <div class="scope-item"><div class="scope-marker"></div><div><strong>Governing Law.</strong> This Agreement is governed by the laws of the District of Columbia.</div></div>
+    <div class="scope-item"><div class="scope-marker"></div><div><strong>Severability.</strong> If any provision is unenforceable, the remaining provisions remain in full effect.</div></div>
+    <div class="scope-item"><div class="scope-marker"></div><div><strong>Assignment.</strong> Neither party may assign this Agreement without the other's written consent.</div></div>
+    <div class="scope-item"><div class="scope-marker"></div><div><strong>Force Majeure.</strong> Neither party is liable for delays caused by events beyond reasonable control, including natural disasters, supply chain disruptions, or government actions.</div></div>
+    <div class="scope-item"><div class="scope-marker"></div><div><strong>Feasibility Assumption.</strong> All plumbing, relocation, &amp; design concepts are based on the assumption that the contractor and plumber has verified and has necessary confidence in feasibility of the relocation of items such as plumbing drains, air vents, water lines consistent with the Client's requests.</div></div>
+
+    <!-- Signatures -->
+    <h3>Signatures</h3>
+    <p>By signing below, both parties agree to the terms of this Agreement.</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; max-width: 600px;">
+      <div class="deliverable-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="deliverable-title">Designer</div>
+          <p style="margin-bottom: 2rem; font-size: 0.85rem;">Lindsey Goble<br>Ardesia Architecture &amp; Design</p>
+        </div>
+        <div style="border-top: 1px solid var(--charcoal); padding-top: 0.5rem; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; color: var(--dark-gray);">Signature &amp; Date</div>
+      </div>
+      <div class="deliverable-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="deliverable-title">Client</div>
+          <p style="margin-bottom: 2rem; font-size: 0.85rem;">Devon Hinajosa</p>
+        </div>
+        <div style="border-top: 1px solid var(--charcoal); padding-top: 0.5rem; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; color: var(--dark-gray);">Signature &amp; Date</div>
+      </div>
+    </div>
+
+    <p style="font-size: 0.75rem; color: var(--dark-gray); font-style: italic; margin-top: 2rem; text-align: center;">This agreement was prepared for review purposes. Both parties are encouraged to have this document reviewed by legal counsel before signing.</p>
+
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <a href="https://ardesiaad.com/">Ardesia Architecture & Design</a> &nbsp;&middot;&nbsp; By Lindsey Goble
+  </footer>
+
+  <script>
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    // Lightbox
+    function openLightbox(img) {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
